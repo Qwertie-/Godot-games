@@ -35,24 +35,16 @@ func start():
 	while i < moves.size():
 		if moves[i] == "Red":
 			print ("Move " + str(i) + " " + "is red")
-			get_node("Red").set_modulate(Color("ffffff"))
-			OS.delay_msec(3000)
-			get_node("Red").set_modulate(Color("000000"))
+			
 		elif moves[i] == "Blue":
 			print ("Move " + str(i) + " " + "is blue")
-			get_node("Blue").set_modulate(Color("ffffff"))
-			OS.delay_msec(3000)
-			get_node("Blue").set_modulate(Color("000000"))
+			
 		elif moves[i] == "Green":
 			print ("Move " + str(i) + " " + "is Green")
-			get_node("Green").set_modulate(Color("ffffff"))
-			OS.delay_msec(3000)
-			get_node("Green").set_modulate(Color("000000"))
+			
 		elif moves[i] == "Yellow":
 			print ("Move " + str(i) + " " + "is Yellow")
-			get_node("Yellow").set_modulate(Color("ffffff"))
-			OS.delay_msec(3000)
-			get_node("Yellow").set_modulate(Color("000000"))
+			
 		i += 1
 
 
