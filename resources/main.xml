@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -53,29 +53,20 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
-				<resource  resource_type="Script" path="res://main.gd">  </resource>
+				<resource  resource_type="Script" path="res://resources/main.gd">  </resource>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
-						<string> "Script" </string>
-						<dictionary  shared="false">
-							<string> "current" </string>
-							<int> 0 </int>
-							<string> "sources" </string>
-							<array  len="1" shared="false">
-								<string> "res://main.gd" </string>
-							</array>
-						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.814506 </real>
+							<real> 0.487675 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -59.3776, -50.026 </vector2>
+							<vector2> -596.672, -329.781 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
