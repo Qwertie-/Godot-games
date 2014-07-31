@@ -35,16 +35,16 @@ func start():
 	while i < moves.size():
 		if moves[i] == "Red":
 			print ("Move " + str(i) + " " + "is red")
-			
+			get_node("AnimationPlayer").play("Blink_red",-1,1,false)
 		elif moves[i] == "Blue":
 			print ("Move " + str(i) + " " + "is blue")
-			
+			get_node("AnimationPlayer").play("Blink_blue",-1,1,false)
 		elif moves[i] == "Green":
 			print ("Move " + str(i) + " " + "is Green")
-			
+			get_node("AnimationPlayer").play("Blink_green",-1,1,false)
 		elif moves[i] == "Yellow":
 			print ("Move " + str(i) + " " + "is Yellow")
-			
+			get_node("AnimationPlayer").play("Blink_yellow",-1,1,false)
 		i += 1
 
 

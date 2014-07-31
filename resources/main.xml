@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="6" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+<resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
+	<resource type="Animation" path="local://1">
+		<string name="resource/name"> "Blink_green" </string>
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Green:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://2">
+		<string name="resource/name"> "Blink_blue" </string>
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Blue:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://3">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Yellow:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://4">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Red:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.394593, 0.396752, 0.39455, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.498303, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="28">
+			<string_array  len="40">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -37,15 +135,27 @@
 				<string> "Blue" </string>
 				<string> "Green" </string>
 				<string> "Yellow" </string>
+				<string> "AnimationPlayer" </string>
+				<string> "playback/process_mode" </string>
+				<string> "playback/default_blend_time" </string>
+				<string> "root/root" </string>
+				<string> "anims/Blink_green" </string>
+				<string> "anims/Blink_blue" </string>
+				<string> "anims/Blink_yellow" </string>
+				<string> "anims/Blink_red" </string>
+				<string> "playback/active" </string>
+				<string> "playback/speed" </string>
+				<string> "blend_times" </string>
+				<string> "autoplay" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 6 </int>
 			<string> "variants" </string>
-			<array  len="24" shared="false">
+			<array  len="31" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -57,16 +167,25 @@
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 0 </int>
+							<string> "sources" </string>
+							<array  len="1" shared="false">
+								<string> "res://resources/main.gd" </string>
+							</array>
+						</dictionary>
 						<string> "2D" </string>
 						<dictionary  shared="false">
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.487675 </real>
+							<real> 0.814506 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -596.672, -329.781 </vector2>
+							<vector2> -294.481, -163.894 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -155,26 +274,34 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
-				<vector2> 125.229, 28.2379 </vector2>
+				<vector2> 134.752, 28.2379 </vector2>
 				<vector2> 27.0656, 27.0656 </vector2>
 				<resource  resource_type="Texture" path="res://resources/redB.png">  </resource>
 				<int> 1 </int>
 				<int> 0 </int>
-				<color> 0.394593, 0.396752, 0.39455, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
 				<vector2> 554.938, 164.517 </vector2>
 				<vector2> 27, 27 </vector2>
 				<resource  resource_type="Texture" path="res://resources/blueB.png">  </resource>
 				<color> 0.396078, 0.396078, 0.396078, 1 </color>
-				<vector2> 259.053, 446.896 </vector2>
+				<vector2> 269.684, 444.68 </vector2>
 				<resource  resource_type="Texture" path="res://resources/greenB.png">  </resource>
 				<vector2> 556.165, 443.213 </vector2>
 				<resource  resource_type="Texture" path="res://resources/yellowB.png">  </resource>
+				<node_path> ".." </node_path>
+				<resource  resource_type="Animation" path="local://1">  </resource>
+				<resource  resource_type="Animation" path="local://2">  </resource>
+				<resource  resource_type="Animation" path="local://3">  </resource>
+				<resource  resource_type="Animation" path="local://4">  </resource>
+				<array  len="0" shared="false">
+				</array>
+				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="207"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0 </int_array>
+			<int_array  len="238"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
