@@ -1,15 +1,15 @@
 extends Node2D
 
 var moves         = []
-var cubes         = []
+var cubes         = ["Red","Blue","Green","Yellow"]
 var pressed
 var enter_pressed  
 
 func _ready():
-	cubes.push_back("Red")
-	cubes.push_back("Blue")
-	cubes.push_back("Green")
-	cubes.push_back("Yellow")
+	#cubes.push_back("Red")
+	#cubes.push_back("Blue")
+	#cubes.push_back("Green")
+	#cubes.push_back("Yellow")
 	set_process(true)
 
 func _process(delta):
@@ -46,6 +46,8 @@ func start():
 			print ("Move " + str(i) + " " + "is Yellow")
 			get_node("AnimationPlayer").play("Blink_yellow",-1,1,false)
 		i += 1
+	i = 0
+	
 
 
 
