@@ -57,16 +57,16 @@ func start():  #Plays animations to show the patern
 	while i < moves.size():
 		if moves[i] == "Red":
 			print ("Move " + str(i) + " " + "is red")
-			get_node("AnimationPlayer").play("Blink_red",-1,1,false)
+			get_node("AnimationPlayer").queue("Blink_red")
 		elif moves[i] == "Blue":
 			print ("Move " + str(i) + " " + "is blue")
-			get_node("AnimationPlayer").play("Blink_blue",-1,1,false)
+			get_node("AnimationPlayer").queue("Blink_blue")
 		elif moves[i] == "Green":
 			print ("Move " + str(i) + " " + "is Green")
-			get_node("AnimationPlayer").play("Blink_green",-1,1,false)
+			get_node("AnimationPlayer").queue("Blink_green")
 		elif moves[i] == "Yellow":
 			print ("Move " + str(i) + " " + "is Yellow")
-			get_node("AnimationPlayer").play("Blink_yellow",-1,1,false)
+			get_node("AnimationPlayer").queue("Blink_yellow")
 		i += 1
 	user_turn = true
 	
