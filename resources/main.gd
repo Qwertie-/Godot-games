@@ -5,6 +5,8 @@ var cubes         = ["Red","Blue","Green","Yellow"]
 var user_turn     = false
 var user_move     = []
 var user_turns    = 0
+var game_running  = false
+var display_move  = 0
 var pressed
 var enter_pressed
 
@@ -14,6 +16,7 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	start()
 	if Input.is_action_pressed("space"):
 		if pressed == false:
 			new_move()
@@ -23,7 +26,8 @@ func _process(delta):
 		
 	if Input.is_action_pressed("ui_accept"):
 		if enter_pressed == false:
-			start()
+			display_move = 0
+			game_running = true
 			enter_pressed = true
 	else:
 		enter_pressed = false
@@ -51,24 +55,14 @@ func _process(delta):
 			print (user_move)
 
 func start():  #Plays animations to show the patern
-	print ("Game started")
-	var i = 0
-	print (moves.size())
-	while i < moves.size():
-		if moves[i] == "Red":
-			print ("Move " + str(i) + " " + "is red")
-			get_node("AnimationPlayer").queue("Blink_red")
-		elif moves[i] == "Blue":
-			print ("Move " + str(i) + " " + "is blue")
-			get_node("AnimationPlayer").queue("Blink_blue")
-		elif moves[i] == "Green":
-			print ("Move " + str(i) + " " + "is Green")
-			get_node("AnimationPlayer").queue("Blink_green")
-		elif moves[i] == "Yellow":
-			print ("Move " + str(i) + " " + "is Yellow")
-			get_node("AnimationPlayer").queue("Blink_yellow")
-		i += 1
-	user_turn = true
+	if game_running:
+		print ("Game started")
+		var i = 0
+		
+		get_node("Timer").start()
+
+		user_turn = true
+		game_running = false
 	
 	
 
@@ -93,3 +87,20 @@ func new_move(): #adds a new move to the pattern
 		moves.push_back("Yellow")
 	
 	print (moves)
+
+
+func _on_Timer_timeout():
+	if display_move < moves.size():
+		if moves[display_move] == "Red":
+			print ("Move " + str(display_move) + " " + "is red")
+			get_node("AnimationPlayer").queue("Blink_red")
+		elif moves[display_move] == "Blue":
+			print ("Move " + str(display_move) + " " + "is blue")
+			get_node("AnimationPlayer").queue("Blink_blue")
+		elif moves[display_move] == "Green":
+			print ("Move " + str(display_move) + " " + "is Green")
+			get_node("AnimationPlayer").queue("Blink_green")
+		elif moves[display_move] == "Yellow":
+			print ("Move " + str(display_move) + " " + "is Yellow")
+			get_node("AnimationPlayer").queue("Blink_yellow")
+		display_move += 1

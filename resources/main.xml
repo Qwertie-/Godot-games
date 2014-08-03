@@ -2,9 +2,9 @@
 <resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
 	<resource type="Animation" path="local://1">
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
@@ -105,7 +105,7 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="40">
+			<string_array  len="46">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -146,15 +146,21 @@
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
 				<string> "autoplay" </string>
+				<string> "Timer" </string>
+				<string> "wait_time" </string>
+				<string> "one_shot" </string>
+				<string> "autostart" </string>
+				<string> "_on_Timer_timeout" </string>
+				<string> "timeout" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
-			<int> 0 </int>
+			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 6 </int>
+			<int> 7 </int>
 			<string> "variants" </string>
-			<array  len="31" shared="false">
+			<array  len="32" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -298,11 +304,12 @@
 				<array  len="0" shared="false">
 				</array>
 				<string> "" </string>
+				<real> 2.3 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="238"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0 </int_array>
+			<int_array  len="253"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 31, 42, 3, 43, 3, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="0"> 				 </int_array>
+			<int_array  len="6"> 				6, 0, 45, 44, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>
