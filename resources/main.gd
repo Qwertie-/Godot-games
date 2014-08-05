@@ -4,6 +4,7 @@ var moves         = []
 var cubes         = ["Red","Blue","Green","Yellow"]
 var game_running  = false
 var display_move  = 0
+var start_pressed = false
 var pressed
 var enter_pressed
 
@@ -15,14 +16,27 @@ func _ready():
 
 func _process(delta):
 	start()
-	if Input.is_action_pressed("space"):
+	
+	if Input.is_action_pressed("start"): #Starts the game normaly (Adds move then shows animation)
+		if !start_pressed && !game_running :
+			new_move()
+			display_move = 0
+			game_running = true
+			start_pressed = true
+	else:
+		start_pressed = false
+		
+		
+		
+	
+	if Input.is_action_pressed("space"): #Just adds move
 		if pressed == false:
 			new_move()
 			pressed = true
 	else:
 		pressed = false
 		
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("ui_accept"): #Just starts game
 		if enter_pressed == false:
 			display_move = 0
 			game_running = true

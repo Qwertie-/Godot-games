@@ -1,36 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
-	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
 	<resource type="Animation" path="local://1">
-		<real name="length"> 2 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Red:modulate" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<color> 0.394593, 0.396752, 0.39455, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 0.392157, 0.392157, 0.392157, 1 </color>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.498303, 1.5, 2 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://2">
-		<string name="resource/name"> "Blink_green" </string>
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -48,6 +23,30 @@
 				<color> 1, 1, 1, 1 </color>
 				<color> 1, 1, 1, 1 </color>
 				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://2">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Yellow:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
 			</array>
 			<string> "times" </string>
 			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
@@ -83,7 +82,7 @@
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
 		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Yellow:modulate" </node_path>
+		<node_path name="tracks/0/path"> "Red:modulate" </node_path>
 		<int name="tracks/0/interp"> 1 </int>
 		<dictionary name="tracks/0/keys" shared="false">
 			<string> "cont" </string>
@@ -92,13 +91,13 @@
 			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
 			<string> "values" </string>
 			<array  len="4" shared="false">
-				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+				<color> 0.394593, 0.396752, 0.39455, 1 </color>
 				<color> 1, 1, 1, 1 </color>
 				<color> 1, 1, 1, 1 </color>
 				<color> 0.392157, 0.392157, 0.392157, 1 </color>
 			</array>
 			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+			<real_array  len="4"> 				0, 0.498303, 1.5, 2 </real_array>
 		</dictionary>
 
 	</resource>
@@ -138,10 +137,10 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
-				<string> "anims/Blink_red" </string>
 				<string> "anims/Blink_green" </string>
-				<string> "anims/Blink_blue" </string>
 				<string> "anims/Blink_yellow" </string>
+				<string> "anims/Blink_blue" </string>
+				<string> "anims/Blink_red" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
