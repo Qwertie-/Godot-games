@@ -185,11 +185,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1 </real>
+							<real> 0.814506 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -218.917, 22.1364 </vector2>
+							<vector2> -460.611, -107.44 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
