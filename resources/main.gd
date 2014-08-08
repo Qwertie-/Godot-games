@@ -5,6 +5,9 @@ var cubes         = ["Red","Blue","Green","Yellow"]
 var game_running  = false
 var display_move  = 0
 var start_pressed = false
+var users_turn    = false
+var user_move     = []
+var user_turns    = 0
 var pressed
 var enter_pressed
 
@@ -15,6 +18,7 @@ func _ready():
 
 
 func _process(delta):
+	user_move()
 	
 	if Input.is_action_pressed("start"): #Starts the game normaly (Adds move then shows animation)
 		if !start_pressed && !game_running :
@@ -85,3 +89,24 @@ func _on_Timer_timeout():
 			print ("Move " + str(display_move) + " " + "is Yellow")
 			get_node("AnimationPlayer").queue("Blink_yellow")
 		display_move += 1
+
+
+func user_move():
+	if users_turn:
+		if Input.is_action_pressed("red"):
+			user_move.push_back("Red")
+			user_turns += 1
+			print (user_move)
+		elif Input.is_action_pressed("blue"):
+			user_move.push_back("Blue")
+			user_turns += 1
+			print (user_move)
+		elif Input.is_action_pressed("green"):
+			user_move.push_back("Green")
+			user_turns += 1
+			print (user_move)
+		elif Input.is_action_pressed("yellow"):
+			user_move.push_back("Yellow")
+			user_turns += 1
+			print (user_move)
+	
