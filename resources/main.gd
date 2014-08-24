@@ -11,6 +11,12 @@ var user_turns    = 0
 var pressed
 var enter_pressed
 
+ 
+var red_pressed    = false
+var blue_pressed   = false
+var green_pressed  = false
+var yellow_pressed = false
+
 
 
 func _ready():
@@ -25,6 +31,7 @@ func _process(delta):
 			new_move()
 			display_move = 0
 			game_running = true
+			users_turn = false
 			start_pressed = true
 			start()
 	else:
@@ -32,14 +39,14 @@ func _process(delta):
 		
 		
 	if Input.is_action_pressed("space"): #Just adds move
-		if pressed == false:
+		if !pressed:
 			new_move()
 			pressed = true
 	else:
 		pressed = false
 		
 	if Input.is_action_pressed("ui_accept"): #Just starts game
-		if enter_pressed == false:
+		if !enter_pressed:
 			display_move = 0
 			game_running = true
 			start()
@@ -47,7 +54,7 @@ func _process(delta):
 	else:
 		enter_pressed = false
 		
-	if display_move == moves.size():
+	if display_move == moves.size() + 1:
 		game_running = false
 
 
@@ -89,24 +96,53 @@ func _on_Timer_timeout():
 			print ("Move " + str(display_move) + " " + "is Yellow")
 			get_node("AnimationPlayer").queue("Blink_yellow")
 		display_move += 1
+<<<<<<< Updated upstream
+=======
+	elif display_move == moves.size():
+		display_move += 1
+		
+	if display_move == moves.size() +1 && !users_turn:
+		print ("start user turn")
+		users_turn = true
+>>>>>>> Stashed changes
 
 
 func user_move():
+	
 	if users_turn:
 		if Input.is_action_pressed("red"):
-			user_move.push_back("Red")
-			user_turns += 1
-			print (user_move)
-		elif Input.is_action_pressed("blue"):
-			user_move.push_back("Blue")
-			user_turns += 1
-			print (user_move)
-		elif Input.is_action_pressed("green"):
-			user_move.push_back("Green")
-			user_turns += 1
-			print (user_move)
-		elif Input.is_action_pressed("yellow"):
-			user_move.push_back("Yellow")
-			user_turns += 1
-			print (user_move)
+			if !red_pressed:
+				user_move.push_back("Red")
+				user_turns += 1
+				print (user_move)
+				red_pressed = true
+		else:
+			red_pressed = false
+		
+		if Input.is_action_pressed("blue"):
+			if !blue_pressed:
+				user_move.push_back("Blue")
+				user_turns += 1
+				print (user_move)
+				blue_pressed = true
+		else:
+			blue_pressed = false
+			
+		if Input.is_action_pressed("green"):
+			if !green_pressed:
+				user_move.push_back("Green")
+				user_turns += 1
+				print (user_move)
+				green_pressed = true
+		else:
+			green_pressed = false
+		
+		if Input.is_action_pressed("yellow"):
+			if !yellow_pressed:
+				user_move.push_back("Yellow")
+				user_turns += 1
+				print (user_move)
+				yellow_pressed = true
+		else:
+			yellow_pressed = false
 	
