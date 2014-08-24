@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="10" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+<resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/debug.gd" type="Script"></ext_resource>
+	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
-	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
 	<resource type="Animation" path="local://1">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Yellow:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://2">
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -29,7 +54,7 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://2">
+	<resource type="Animation" path="local://3">
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -47,30 +72,6 @@
 				<color> 1, 1, 1, 1 </color>
 				<color> 1, 1, 1, 1 </color>
 				<color> 0.396078, 0.396078, 0.396078, 1 </color>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://3">
-		<real name="length"> 2 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Yellow:modulate" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<color> 0.392157, 0.392157, 0.392157, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 0.392157, 0.392157, 0.392157, 1 </color>
 			</array>
 			<string> "times" </string>
 			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
@@ -104,7 +105,7 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="46">
+			<string_array  len="76">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -137,9 +138,9 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
+				<string> "anims/Blink_yellow" </string>
 				<string> "anims/Blink_blue" </string>
 				<string> "anims/Blink_green" </string>
-				<string> "anims/Blink_yellow" </string>
 				<string> "anims/Blink_red" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
@@ -149,6 +150,36 @@
 				<string> "wait_time" </string>
 				<string> "one_shot" </string>
 				<string> "autostart" </string>
+				<string> "Debug" </string>
+				<string> "users_turn" </string>
+				<string> "Label" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus_neighbour/left" </string>
+				<string> "focus_neighbour/top" </string>
+				<string> "focus_neighbour/right" </string>
+				<string> "focus_neighbour/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/stretch_ratio" </string>
+				<string> "range/min" </string>
+				<string> "range/max" </string>
+				<string> "range/step" </string>
+				<string> "range/page" </string>
+				<string> "range/value" </string>
+				<string> "range/exp_edit" </string>
+				<string> "rounded_values" </string>
+				<string> "text" </string>
+				<string> "align" </string>
+				<string> "valign" </string>
+				<string> "autowrap" </string>
+				<string> "uppercase" </string>
+				<string> "percent_visible" </string>
+				<string> "game_running" </string>
+				<string> "margin/top" </string>
+				<string> "display_move" </string>
+				<string> "margin/left" </string>
 				<string> "_on_Timer_timeout" </string>
 				<string> "timeout" </string>
 			</string_array>
@@ -157,9 +188,9 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 7 </int>
+			<int> 11 </int>
 			<string> "variants" </string>
-			<array  len="32" shared="false">
+			<array  len="43" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -176,8 +207,9 @@
 							<string> "current" </string>
 							<int> 0 </int>
 							<string> "sources" </string>
-							<array  len="1" shared="false">
+							<array  len="2" shared="false">
 								<string> "res://resources/main.gd" </string>
+								<string> "res://resources/debug.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -185,11 +217,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.598737 </real>
+							<real> 0.9025 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> 12.3899, -66.3826 </vector2>
+							<vector2> -307.225, -142.91 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -304,11 +336,22 @@
 				</array>
 				<string> "" </string>
 				<real> 2.3 </real>
+				<resource  resource_type="Script" path="res://resources/debug.gd">  </resource>
+				<real> 40 </real>
+				<real> 13 </real>
+				<int> 2 </int>
+				<real> -1 </real>
+				<real> 18 </real>
+				<real> 31 </real>
+				<real> 2 </real>
+				<real> 63 </real>
+				<real> 42 </real>
+				<real> 76 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="253"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 31, 42, 3, 43, 3, 0 </int_array>
+			<int_array  len="473"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 31, 42, 3, 43, 3, 0, 0, 0, 1, 44, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 32, 0, 7, 0, 46, 45, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 47, 33, 48, 34, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 70, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 71, 37, 47, 33, 48, 38, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 72, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 73, 39, 71, 40, 47, 41, 48, 42, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				6, 0, 45, 44, 2, 0 </int_array>
+			<int_array  len="6"> 				6, 0, 75, 74, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>
