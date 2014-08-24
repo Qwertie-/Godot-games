@@ -96,24 +96,21 @@ func _on_Timer_timeout():
 			print ("Move " + str(display_move) + " " + "is Yellow")
 			get_node("AnimationPlayer").queue("Blink_yellow")
 		display_move += 1
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
 	elif display_move == moves.size():
 		display_move += 1
 		
 	if display_move == moves.size() +1 && !users_turn:
 		print ("start user turn")
 		users_turn = true
->>>>>>> Stashed changes
-=======
+
 	elif display_move == moves.size():
 		display_move += 1
 		
 	if display_move == moves.size() && !users_turn:
 		print ("start user turn")
 		users_turn = true
->>>>>>> 3be9e5dc1b3cab537f52589f372b3fa17046d630
+
 
 
 func user_move():
