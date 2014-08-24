@@ -3,7 +3,7 @@ extends Node2D
 var moves         = []
 var cubes         = ["Red","Blue","Green","Yellow"]
 var game_running  = false
-var display_move  = 0
+var display_move  = -1
 var start_pressed = false
 var users_turn    = true
 var user_move     = []
@@ -89,6 +89,9 @@ func _on_Timer_timeout():
 			print ("Move " + str(display_move) + " " + "is Yellow")
 			get_node("AnimationPlayer").queue("Blink_yellow")
 		display_move += 1
+	elif display_move == moves.size():
+		display_move += 1
+		
 	if display_move == moves.size() && !users_turn:
 		print ("start user turn")
 		users_turn = true
