@@ -32,6 +32,7 @@ func _process(delta):
 			display_move = 0
 			game_running = true
 			users_turn = false
+			#user_move = []
 			start_pressed = true
 			start()
 	else:
@@ -107,13 +108,12 @@ func _on_Timer_timeout():
 	elif display_move == moves.size():
 		display_move += 1
 		
-	if display_move == moves.size() && !users_turn:
-		print ("start user turn")
-		users_turn = true
 
 
 
 func user_move():
+	if user_turns == moves.size():
+		users_turn = false
 	
 	if users_turn:
 		if Input.is_action_pressed("red"):
