@@ -101,13 +101,9 @@ func _on_Timer_timeout():
 	elif display_move == moves.size():
 		display_move += 1
 		
-	if display_move == moves.size() +1 && !users_turn:
+	if display_move == moves.size() +1 && !users_turn && user_turns == 0:
 		print ("start user turn")
 		users_turn = true
-
-	elif display_move == moves.size():
-		display_move += 1
-		
 
 
 
