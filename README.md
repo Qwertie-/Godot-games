@@ -10,7 +10,7 @@ Here is an early screenshot of the game
 ![Screenshot](https://i.imgur.com/zyovf7G.png)
 
 ####How to use:
-1. Download [Godot](http://www.godotengine.org/wp/?page_id=51)
+1. Download [Godot](http://www.godotengine.org/wp/?page_id=44)
 2. Import this repo into godot
 3. Run game
 
