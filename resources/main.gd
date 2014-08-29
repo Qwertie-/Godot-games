@@ -1,21 +1,23 @@
 extends Node2D
 
-var moves         = []
-var cubes         = ["Red","Blue","Green","Yellow"]
-var game_running  = false
-var display_move  = -1
-var start_pressed = false
-var users_turn    = true
-var user_move     = []
-var user_turns    = 0
-var pressed
-var enter_pressed
+var moves         = []                                #The moves genorated by code
+var cubes         = ["Red","Blue","Green","Yellow"]   #Array of posible moves
+var game_running  = false                             #Shows if animation is running
+var display_move  = -1                                #Shows the current move in the animation                           
+var users_turn    = true                              #Shows if the user can input a move
+var user_move     = []                                #Array of moves picked by user
+var user_turns    = 0                                 #Amount of moves taken by user
+
+
 
  
 var red_pressed    = false
 var blue_pressed   = false
 var green_pressed  = false
 var yellow_pressed = false
+var start_pressed  = false  
+var enter_pressed
+var pressed
 
 
 
@@ -31,8 +33,7 @@ func _process(delta):
 			new_move()
 			display_move = 0
 			game_running = true
-			users_turn = false
-			#user_move = []
+			user_move = []
 			start_pressed = true
 			start()
 	else:
@@ -106,10 +107,16 @@ func _on_Timer_timeout():
 		users_turn = true
 
 
+func move_check():
+	if user_move == moves:
+		#print ("match")
+		pass
 
 func user_move():
 	if user_turns == moves.size():
 		users_turn = false
+		move_check()
+		
 	
 	if users_turn:
 		if Input.is_action_pressed("red"):

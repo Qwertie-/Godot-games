@@ -1,60 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/blueB.png" type="Texture"></ext_resource>
+	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
 	<ext_resource path="res://resources/main.gd" type="Script"></ext_resource>
 	<ext_resource path="res://resources/debug.gd" type="Script"></ext_resource>
 	<ext_resource path="res://resources/redB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/greenB.png" type="Texture"></ext_resource>
-	<ext_resource path="res://resources/yellowB.png" type="Texture"></ext_resource>
 	<resource type="Animation" path="local://1">
-		<real name="length"> 2 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Red:modulate" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<color> 0.394593, 0.396752, 0.39455, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 0.392157, 0.392157, 0.392157, 1 </color>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.498303, 1.5, 2 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://2">
-		<real name="length"> 2 </real>
-		<bool name="loop"> False </bool>
-		<real name="step"> 0.1 </real>
-		<string name="tracks/0/type"> "value" </string>
-		<node_path name="tracks/0/path"> "Blue:modulate" </node_path>
-		<int name="tracks/0/interp"> 1 </int>
-		<dictionary name="tracks/0/keys" shared="false">
-			<string> "cont" </string>
-			<bool> True </bool>
-			<string> "transitions" </string>
-			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
-			<string> "values" </string>
-			<array  len="4" shared="false">
-				<color> 0.396078, 0.396078, 0.396078, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 1, 1, 1 </color>
-				<color> 0.396078, 0.396078, 0.396078, 1 </color>
-			</array>
-			<string> "times" </string>
-			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
-		</dictionary>
-
-	</resource>
-	<resource type="Animation" path="local://3">
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -78,7 +30,7 @@
 		</dictionary>
 
 	</resource>
-	<resource type="Animation" path="local://4">
+	<resource type="Animation" path="local://2">
 		<real name="length"> 2 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0.1 </real>
@@ -102,10 +54,58 @@
 		</dictionary>
 
 	</resource>
+	<resource type="Animation" path="local://3">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Red:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.394593, 0.396752, 0.39455, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.392157, 0.392157, 0.392157, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.498303, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
+	<resource type="Animation" path="local://4">
+		<real name="length"> 2 </real>
+		<bool name="loop"> False </bool>
+		<real name="step"> 0.1 </real>
+		<string name="tracks/0/type"> "value" </string>
+		<node_path name="tracks/0/path"> "Blue:modulate" </node_path>
+		<int name="tracks/0/interp"> 1 </int>
+		<dictionary name="tracks/0/keys" shared="false">
+			<string> "cont" </string>
+			<bool> True </bool>
+			<string> "transitions" </string>
+			<real_array  len="4"> 				1, 1, 1, 1 </real_array>
+			<string> "values" </string>
+			<array  len="4" shared="false">
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 1, 1, 1, 1 </color>
+				<color> 0.396078, 0.396078, 0.396078, 1 </color>
+			</array>
+			<string> "times" </string>
+			<real_array  len="4"> 				0, 0.5, 1.5, 2 </real_array>
+		</dictionary>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="76">
+			<string_array  len="77">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -138,10 +138,10 @@
 				<string> "playback/process_mode" </string>
 				<string> "playback/default_blend_time" </string>
 				<string> "root/root" </string>
-				<string> "anims/Blink_red" </string>
-				<string> "anims/Blink_blue" </string>
 				<string> "anims/Blink_yellow" </string>
 				<string> "anims/Blink_green" </string>
+				<string> "anims/Blink_red" </string>
+				<string> "anims/Blink_blue" </string>
 				<string> "playback/active" </string>
 				<string> "playback/speed" </string>
 				<string> "blend_times" </string>
@@ -180,6 +180,7 @@
 				<string> "margin/top" </string>
 				<string> "display_move" </string>
 				<string> "margin/left" </string>
+				<string> "user_move" </string>
 				<string> "_on_Timer_timeout" </string>
 				<string> "timeout" </string>
 			</string_array>
@@ -188,9 +189,9 @@
 			<string> "conn_count" </string>
 			<int> 1 </int>
 			<string> "node_count" </string>
-			<int> 11 </int>
+			<int> 12 </int>
 			<string> "variants" </string>
-			<array  len="43" shared="false">
+			<array  len="47" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -217,11 +218,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 0.9025 </real>
+							<real> 0.735092 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -307.225, -142.91 </vector2>
+							<vector2> -603.457, -393.935 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -235,17 +236,17 @@
 							<array  len="4" shared="false">
 								<dictionary  shared="false">
 									<string> "distance" </string>
-									<real> 4 </real>
+									<real> 25.364721 </real>
 									<string> "x_rot" </string>
-									<real> 0 </real>
+									<real> 0.325 </real>
 									<string> "y_rot" </string>
-									<real> 0 </real>
+									<real> -0.537499 </real>
 									<string> "use_orthogonal" </string>
 									<bool> False </bool>
 									<string> "use_environment" </string>
 									<bool> False </bool>
 									<string> "pos" </string>
-									<vector3> 0, 0, 0 </vector3>
+									<vector3> -0.746883, 0.961476, 0.0680231 </vector3>
 								</dictionary>
 								<dictionary  shared="false">
 									<string> "distance" </string>
@@ -310,9 +311,9 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "Script" </string>
+					<string> "2D" </string>
 				</dictionary>
-				<vector2> 134.752, 28.2379 </vector2>
+				<vector2> 134.43, 29.3436 </vector2>
 				<vector2> 27.0656, 27.0656 </vector2>
 				<resource  resource_type="Texture" path="res://resources/redB.png">  </resource>
 				<int> 1 </int>
@@ -323,9 +324,9 @@
 				<vector2> 27, 27 </vector2>
 				<resource  resource_type="Texture" path="res://resources/blueB.png">  </resource>
 				<color> 0.396078, 0.396078, 0.396078, 1 </color>
-				<vector2> 269.684, 444.68 </vector2>
+				<vector2> 270.905, 443.285 </vector2>
 				<resource  resource_type="Texture" path="res://resources/greenB.png">  </resource>
-				<vector2> 556.165, 443.213 </vector2>
+				<vector2> 555.286, 443.213 </vector2>
 				<resource  resource_type="Texture" path="res://resources/yellowB.png">  </resource>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://1">  </resource>
@@ -347,11 +348,15 @@
 				<real> 63 </real>
 				<real> 42 </real>
 				<real> 76 </real>
+				<real> 154 </real>
+				<real> 8 </real>
+				<real> 194 </real>
+				<real> 21 </real>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="473"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 31, 42, 3, 43, 3, 0, 0, 0, 1, 44, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 32, 0, 7, 0, 46, 45, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 47, 33, 48, 34, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 70, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 71, 37, 47, 33, 48, 38, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 72, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 73, 39, 71, 40, 47, 41, 48, 42, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0 </int_array>
+			<int_array  len="540"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 9, 8, 5, 9, 10, 14, 11, 15, 3, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 13, 25, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 16, 8, 5, 9, 17, 14, 18, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 26, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 20, 8, 5, 9, 17, 14, 21, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 19, 23, 3, 24, 15, 0, 0, 0, 13, 27, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 22, 8, 5, 9, 17, 14, 23, 15, 1, 16, 4, 17, 3, 18, 3, 19, 12, 20, 12, 21, 13, 22, 14, 23, 3, 24, 15, 0, 0, 0, 28, 28, -1, 12, 2, 0, 29, 12, 30, 5, 31, 24, 32, 25, 33, 26, 34, 27, 35, 28, 36, 1, 37, 2, 38, 29, 39, 30, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 31, 42, 3, 43, 3, 0, 0, 0, 1, 44, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 32, 0, 7, 0, 46, 45, -1, 28, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 47, 33, 48, 34, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 70, -1, 29, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 71, 37, 47, 33, 48, 38, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 72, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 73, 39, 71, 40, 47, 41, 48, 42, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0, 7, 0, 46, 74, -1, 30, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 73, 43, 71, 44, 47, 45, 48, 46, 49, 0, 50, 0, 51, 0, 52, 0, 53, 1, 54, 1, 55, 35, 56, 2, 57, 5, 58, 2, 59, 2, 60, 2, 61, 5, 62, 3, 63, 3, 64, 30, 65, 13, 66, 13, 67, 3, 68, 3, 69, 36, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				6, 0, 75, 74, 2, 0 </int_array>
+			<int_array  len="6"> 				6, 0, 76, 75, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>
