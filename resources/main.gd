@@ -34,6 +34,7 @@ func _process(delta):
 			display_move = 0
 			game_running = true
 			user_move = []
+			user_turns    = 0 
 			start_pressed = true
 			start()
 	else:
