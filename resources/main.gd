@@ -9,15 +9,11 @@ var user_move     = []                                #Array of moves picked by 
 var user_turns    = 0                                 #Amount of moves taken by user
 
 
-
- 
 var red_pressed    = false
 var blue_pressed   = false
 var green_pressed  = false
 var yellow_pressed = false
 var start_pressed  = false  
-var enter_pressed
-var pressed
 
 
 
@@ -28,7 +24,7 @@ func _ready():
 func _process(delta):
 	user_move()
 	
-	if Input.is_action_pressed("start"): #Starts the game normaly (Adds move then shows animation)
+	if Input.is_action_pressed("start"): #Starts the game
 		if !start_pressed && !game_running :
 			new_move()
 			display_move = 0
@@ -39,23 +35,7 @@ func _process(delta):
 			start()
 	else:
 		start_pressed = false
-		
-		
-	if Input.is_action_pressed("space"): #Just adds move
-		if !pressed:
-			new_move()
-			pressed = true
-	else:
-		pressed = false
-		
-	if Input.is_action_pressed("ui_accept"): #Just starts game
-		if !enter_pressed:
-			display_move = 0
-			game_running = true
-			start()
-			enter_pressed = true
-	else:
-		enter_pressed = false
+
 		
 	if display_move == moves.size() + 1:
 		game_running = false
@@ -155,4 +135,3 @@ func user_move():
 				yellow_pressed = true
 		else:
 			yellow_pressed = false
-	
