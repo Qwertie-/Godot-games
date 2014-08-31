@@ -1,12 +1,20 @@
 extends Node2D
 
-var debug = true
+var debug = false
+var debug_toggle_pressed = false
 
 
 func _ready():
 	set_process(true)
 	
 func _process(delta):
+	if Input.is_action_pressed("debug"):
+		if !debug_toggle_pressed:
+			if !debug:
+				debug = true
+
+
+	
 	if debug:
 		get_node("users_turn").set_text(str(get_parent().users_turn))
 		get_node("game_running").set_text(str(get_parent().game_running))

@@ -28,7 +28,6 @@ func _process(delta):
 	
 	if Input.is_action_pressed("start"): #Starts the game
 		if !start_pressed && !game_running :
-			
 			start()
 	else:
 		start_pressed = false
@@ -101,10 +100,14 @@ func _on_Timer_timeout():
 
 
 func move_check(): #check to see if user got moves correct
-	if (comp(moves,user_move)):
-		print ("match")
-		move_checked = true
-		start()
+	if !users_turn && !game_running:
+		if (comp(moves,user_move)):
+			print ("match")
+			move_checked = true
+			start()
+		else:
+			print ("Fail")
+			move_checked = true
 		
 
 func user_move():
