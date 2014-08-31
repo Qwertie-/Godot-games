@@ -28,13 +28,7 @@ func _process(delta):
 	
 	if Input.is_action_pressed("start"): #Starts the game
 		if !start_pressed && !game_running :
-			new_move()
-			display_move = 0
-			game_running = true
-			user_move = []
-			user_turns    = 0 
-			start_pressed = true
-			move_checked = false
+			
 			start()
 	else:
 		start_pressed = false
@@ -53,8 +47,15 @@ func _process(delta):
 
 
 func start():  #Plays animations to show the patern
+	move_checked = false
 	print ("Game started")
 	get_node("Timer").start()
+	new_move()
+	display_move = 0
+	game_running = true
+	user_move = []
+	user_turns    = 0 
+	start_pressed = true
 	
 
 
@@ -103,13 +104,13 @@ func move_check(): #check to see if user got moves correct
 	if (comp(moves,user_move)):
 		print ("match")
 		move_checked = true
+		start()
 		
 
 func user_move():
 	if user_turns == moves.size():
 		users_turn = false
-	if user_turns == moves.size() && moves != []:
-		pass
+
 	if !move_checked:
 		move_check()
 	
