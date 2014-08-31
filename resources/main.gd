@@ -7,6 +7,7 @@ var display_move  = -1                                #Shows the current move in
 var users_turn    = true                              #Shows if the user can input a move
 var user_move     = []                                #Array of moves picked by user
 var user_turns    = 0                                 #Amount of moves taken by user
+var move_checked  = true                      #Shows if the user move has been matched to the moves
 
 
 var red_pressed    = false
@@ -14,6 +15,7 @@ var blue_pressed   = false
 var green_pressed  = false
 var yellow_pressed = false
 var start_pressed  = false  
+var space_pressed  = false
 
 
 
@@ -32,9 +34,18 @@ func _process(delta):
 			user_move = []
 			user_turns    = 0 
 			start_pressed = true
+			move_checked = false
 			start()
 	else:
 		start_pressed = false
+		
+	if Input.is_action_pressed("space"): #checks if moves match
+		if !space_pressed:
+			move_check()
+			space_pressed = true
+
+	else:
+		space_pressed = false
 
 		
 	if display_move == moves.size() + 1:
@@ -88,16 +99,19 @@ func _on_Timer_timeout():
 		users_turn = true
 
 
-func move_check():
-	if user_move == moves:
-		#print ("match")
-		pass
+func move_check(): #check to see if user got moves correct
+	if (comp(moves,user_move)):
+		print ("match")
+		move_checked = true
+		
 
 func user_move():
 	if user_turns == moves.size():
 		users_turn = false
+	if user_turns == moves.size() && moves != []:
+		pass
+	if !move_checked:
 		move_check()
-		
 	
 	if users_turn:
 		if Input.is_action_pressed("red"):
@@ -135,3 +149,12 @@ func user_move():
 				yellow_pressed = true
 		else:
 			yellow_pressed = false
+			
+func comp(arr1,arr2):
+   if (arr1.size() == arr2.size()):
+      for i in range(arr1.size()):
+         if (arr1[i] != arr2[i]):
+            return false
+      return true
+   else:
+      return false

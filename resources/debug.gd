@@ -13,5 +13,10 @@ func _process(delta):
 		get_node("display_move").set_text(str(get_parent().display_move))
 		get_node("user_move").set_text(str(get_parent().user_move))
 		get_node("moves").set_text(str(get_parent().moves))
+		get_node("move_checked").set_text(str(get_parent().move_checked))
+
+
+
+
 
 
