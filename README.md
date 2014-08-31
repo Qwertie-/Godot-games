@@ -9,15 +9,15 @@ Here is an early screenshot of the game
 
 ![Screenshot](https://i.imgur.com/zyovf7G.png)
 
-####How to use:
+####How to setup:
 1. Download [Godot](http://www.godotengine.org/wp/?page_id=44)
 2. Import this repo into godot
 3. Run game
 
-####Controls:
-* New turn = Shift
-* Genorate new move = Space
-* Display animation = Enter
+####How to play:
+* Press shift to start
+* Wait for animation to play
+* Use the "qwas" keys to repeat the order that they played in
 
 
 
