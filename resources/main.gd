@@ -15,7 +15,7 @@ var blue_pressed   = false
 var green_pressed  = false
 var yellow_pressed = false
 var start_pressed  = false  
-var space_pressed  = false
+
 
 
 
@@ -32,14 +32,7 @@ func _process(delta):
 			start()
 	else:
 		start_pressed = false
-		
-	if Input.is_action_pressed("space"): #checks if moves match
-		if !space_pressed:
-			move_check()
-			space_pressed = true
 
-	else:
-		space_pressed = false
 
 		
 	if display_move == moves.size() + 1:
