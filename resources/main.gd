@@ -28,6 +28,7 @@ func _process(delta):
 	
 	if Input.is_action_pressed("start"): #Starts the game
 		if !start_pressed && !game_running :
+			get_node("Node2D/message").set_text("")
 			start()
 	else:
 		start_pressed = false
