@@ -7,8 +7,8 @@ var display_move  = -1                                #Shows the current move in
 var users_turn    = true                              #Shows if the user can input a move
 var user_move     = []                                #Array of moves picked by user
 var user_turns    = 0                                 #Amount of moves taken by user
-var move_checked  = true                      #Shows if the user move has been matched to the moves
-
+var move_checked  = true                              #Shows if the user move has been matched to the moves
+var score         = 0
 
 var red_pressed    = false
 var blue_pressed   = false
@@ -27,7 +27,7 @@ func _process(delta):
 	user_move()
 	
 	if Input.is_action_pressed("start"): #Starts the game
-		if !start_pressed && !game_running :
+		if !start_pressed && !game_running:
 			get_node("Node2D/message").set_text("")
 			start()
 	else:
@@ -97,6 +97,8 @@ func move_check(): #check to see if user got moves correct
 	if !users_turn && !game_running:
 		if (comp(moves,user_move)):
 			print ("match")
+			score += 1
+			get_node("Score/scrore_label").set_text("Score: " + str(score))
 			move_checked = true
 			start()
 		else:
