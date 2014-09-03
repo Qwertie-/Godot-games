@@ -41,6 +41,7 @@ func _process(delta):
 
 func start():  #Plays animations to show the patern
 	move_checked = false
+	get_node("side_bar/state").set_text("Wait")
 	print ("Game started")
 	get_node("Timer").start()
 	new_move()
@@ -91,6 +92,7 @@ func _on_Timer_timeout():
 	if display_move == moves.size() +1 && !users_turn && user_turns == 0:
 		print ("start user turn")
 		users_turn = true
+		get_node("side_bar/state").set_text("Go")
 
 
 func move_check(): #check to see if user got moves correct
@@ -98,7 +100,7 @@ func move_check(): #check to see if user got moves correct
 		if (comp(moves,user_move)):
 			print ("match")
 			score += 1
-			get_node("Score/scrore_label").set_text("Score: " + str(score))
+			get_node("side_bar/score").set_text("Score: " + str(score))
 			move_checked = true
 			start()
 		else:
