@@ -27,7 +27,7 @@ func _process(delta):
 	user_move()
 	
 	if Input.is_action_pressed("start"): #Starts the game
-		if !start_pressed && !game_running:
+		if !start_pressed && !game_running && score == 0:
 			get_node("Node2D/message").set_text("")
 			start()
 	else:
@@ -42,7 +42,6 @@ func _process(delta):
 func start():  #Plays animations to show the patern
 	move_checked = false
 	get_node("side_bar/state").set_text("Wait")
-	print ("Game started")
 	get_node("Timer").start()
 	new_move()
 	display_move = 0
@@ -56,7 +55,6 @@ func start():  #Plays animations to show the patern
 func new_move(): #adds a new move to the pattern
 	randomize()
 	var next_cube = int(rand_range(1,5))
-	print (next_cube)
 	
 	if next_cube == 1:
 		moves.push_back("Red")
@@ -73,16 +71,12 @@ func new_move(): #adds a new move to the pattern
 func _on_Timer_timeout():
 	if display_move < moves.size():
 		if moves[display_move] == "Red":
-			print ("Move " + str(display_move) + " " + "is red")
 			get_node("AnimationPlayer").queue("Blink_red")
 		elif moves[display_move] == "Blue":
-			print ("Move " + str(display_move) + " " + "is blue")
 			get_node("AnimationPlayer").queue("Blink_blue")
 		elif moves[display_move] == "Green":
-			print ("Move " + str(display_move) + " " + "is Green")
 			get_node("AnimationPlayer").queue("Blink_green")
 		elif moves[display_move] == "Yellow":
-			print ("Move " + str(display_move) + " " + "is Yellow")
 			get_node("AnimationPlayer").queue("Blink_yellow")
 		display_move += 1
 
@@ -105,6 +99,7 @@ func move_check(): #check to see if user got moves correct
 			start()
 		else:
 			print ("Fail")
+			get_node("Node2D/message").set_text("Game Over")
 			move_checked = true
 		
 
