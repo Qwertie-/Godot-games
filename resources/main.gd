@@ -9,6 +9,7 @@ var user_move     = []                                #Array of moves picked by 
 var user_turns    = 0                                 #Amount of moves taken by user
 var move_checked  = true                              #Shows if the user move has been matched to the moves
 var score         = 0
+var game_over     = false
 
 var red_pressed    = false
 var blue_pressed   = false
@@ -30,6 +31,14 @@ func _process(delta):
 		if !start_pressed && !game_running && score == 0:
 			get_node("Node2D/message").set_text("")
 			start()
+		elif game_over:
+			game_over = false
+			moves = []
+			score = 0
+			get_node("side_bar/score").set_text("Score: " + str(score))
+			get_node("Node2D/message").set_text("")
+			start()
+			
 	else:
 		start_pressed = false
 
@@ -99,7 +108,8 @@ func move_check(): #check to see if user got moves correct
 			start()
 		else:
 			print ("Fail")
-			get_node("Node2D/message").set_text("Game Over")
+			get_node("Node2D/message").set_text("Game Over. Press shift to restart")
+			game_over = true
 			move_checked = true
 		
 
