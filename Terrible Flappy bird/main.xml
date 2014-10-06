@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+	<ext_resource path="res://main.gd" type="Script"></ext_resource>
+	<ext_resource path="res://assets/clouds.png" type="Texture"></ext_resource>
+	<ext_resource path="res://assets/baloon2.png" type="Texture"></ext_resource>
+	<resource type="CapsuleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 12 </real>
+		<real name="height"> 20 </real>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "names" </string>
+			<string_array  len="71">
+				<string> "Game" </string>
+				<string> "Node2D" </string>
+				<string> "_import_path" </string>
+				<string> "visibility/visible" </string>
+				<string> "visibility/opacity" </string>
+				<string> "visibility/self_opacity" </string>
+				<string> "visibility/behind_parent" </string>
+				<string> "transform/pos" </string>
+				<string> "transform/rot" </string>
+				<string> "transform/scale" </string>
+				<string> "script/script" </string>
+				<string> "__meta__" </string>
+				<string> "bg" </string>
+				<string> "Sprite" </string>
+				<string> "texture" </string>
+				<string> "centered" </string>
+				<string> "offset" </string>
+				<string> "flip_h" </string>
+				<string> "flip_v" </string>
+				<string> "vframes" </string>
+				<string> "hframes" </string>
+				<string> "frame" </string>
+				<string> "modulate" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
+				<string> "player" </string>
+				<string> "KinematicBody2D" </string>
+				<string> "shape_count" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "layers" </string>
+				<string> "collide_with/static" </string>
+				<string> "collide_with/kinematic" </string>
+				<string> "collide_with/rigid" </string>
+				<string> "collide_with/character" </string>
+				<string> "collision/margin" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+				<string> "Timer" </string>
+				<string> "wait_time" </string>
+				<string> "one_shot" </string>
+				<string> "autostart" </string>
+				<string> "Menu" </string>
+				<string> "Button" </string>
+				<string> "margin/left" </string>
+				<string> "margin/top" </string>
+				<string> "margin/right" </string>
+				<string> "margin/bottom" </string>
+				<string> "focus_neighbour/left" </string>
+				<string> "focus_neighbour/top" </string>
+				<string> "focus_neighbour/right" </string>
+				<string> "focus_neighbour/bottom" </string>
+				<string> "focus/ignore_mouse" </string>
+				<string> "focus/stop_mouse" </string>
+				<string> "size_flags/horizontal" </string>
+				<string> "size_flags/vertical" </string>
+				<string> "size_flags/stretch_ratio" </string>
+				<string> "disabled" </string>
+				<string> "toggle_mode" </string>
+				<string> "click_on_press" </string>
+				<string> "text" </string>
+				<string> "icon" </string>
+				<string> "flat" </string>
+				<string> "clip_text" </string>
+				<string> "align" </string>
+				<string> "_on_Timer_timeout" </string>
+				<string> "timeout" </string>
+				<string> "_on_Button_pressed" </string>
+				<string> "pressed" </string>
+			</string_array>
+			<string> "version" </string>
+			<int> 1 </int>
+			<string> "conn_count" </string>
+			<int> 2 </int>
+			<string> "node_count" </string>
+			<int> 8 </int>
+			<string> "variants" </string>
+			<array  len="30" shared="false">
+				<node_path> "" </node_path>
+				<bool> True </bool>
+				<real> 1 </real>
+				<bool> False </bool>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<vector2> 1, 1 </vector2>
+				<resource  resource_type="Script" path="res://main.gd">  </resource>
+				<dictionary  shared="false">
+					<string> "__editor_plugin_states__" </string>
+					<dictionary  shared="false">
+						<string> "Script" </string>
+						<dictionary  shared="false">
+							<string> "current" </string>
+							<int> 0 </int>
+							<string> "sources" </string>
+							<array  len="1" shared="false">
+								<string> "res://main.gd" </string>
+							</array>
+						</dictionary>
+						<string> "2D" </string>
+						<dictionary  shared="false">
+							<string> "pixel_snap" </string>
+							<bool> False </bool>
+							<string> "zoom" </string>
+							<real> 1.108033 </real>
+							<string> "use_snap" </string>
+							<bool> False </bool>
+							<string> "ofs" </string>
+							<vector2> -483.913, -66.357 </vector2>
+							<string> "snap" </string>
+							<int> 10 </int>
+						</dictionary>
+						<string> "3D" </string>
+						<dictionary  shared="false">
+							<string> "zfar" </string>
+							<real> 500 </real>
+							<string> "fov" </string>
+							<real> 45 </real>
+							<string> "viewports" </string>
+							<array  len="4" shared="false">
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0.858295 </real>
+									<string> "y_rot" </string>
+									<real> -2.424999 </real>
+									<string> "listener" </string>
+									<bool> True </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+								<dictionary  shared="false">
+									<string> "distance" </string>
+									<real> 4 </real>
+									<string> "x_rot" </string>
+									<real> 0 </real>
+									<string> "y_rot" </string>
+									<real> 0 </real>
+									<string> "listener" </string>
+									<bool> False </bool>
+									<string> "use_environment" </string>
+									<bool> False </bool>
+									<string> "use_orthogonal" </string>
+									<bool> False </bool>
+									<string> "pos" </string>
+									<vector3> 0, 0, 0 </vector3>
+								</dictionary>
+							</array>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
+							<string> "show_grid" </string>
+							<bool> True </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
+							<string> "znear" </string>
+							<real> 0.1 </real>
+						</dictionary>
+					</dictionary>
+					<string> "__editor_run_settings__" </string>
+					<dictionary  shared="false">
+						<string> "custom_args" </string>
+						<string> "-l $scene" </string>
+						<string> "run_mode" </string>
+						<int> 0 </int>
+					</dictionary>
+					<string> "__editor_plugin_screen__" </string>
+					<string> "2D" </string>
+				</dictionary>
+				<resource  resource_type="Texture" path="res://assets/clouds.png">  </resource>
+				<int> 1 </int>
+				<int> 0 </int>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
+				<vector2> 97.629, 275.748 </vector2>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 1, -0, 0, 1, 2.94034, -1.47015 </matrix32>
+				<real> 0.08 </real>
+				<vector2> 0.358492, 0 </vector2>
+				<vector2> 1.4693, 1.4787 </vector2>
+				<resource  resource_type="Texture" path="res://assets/baloon2.png">  </resource>
+				<vector2> 2.94034, -1.47015 </vector2>
+				<real> 3 </real>
+				<real> 28 </real>
+				<real> 25 </real>
+				<real> 69 </real>
+				<real> 45 </real>
+				<int> 2 </int>
+				<string> "Play" </string>
+				<resource name=""></resource>			</array>
+			<string> "nodes" </string>
+			<int_array  len="284"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 14, 9, 15, 3, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 0, 0, 0, 26, 25, -1, 18, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 14, 8, 5, 9, 6, 27, 10, 28, 15, 29, 16, 30, 3, 31, 10, 32, 1, 33, 1, 34, 1, 35, 1, 36, 17, 0, 2, 0, 13, 13, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 18, 8, 5, 9, 19, 14, 20, 15, 1, 16, 4, 17, 3, 18, 3, 19, 10, 20, 10, 21, 11, 22, 12, 23, 3, 24, 13, 0, 2, 0, 37, 37, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 21, 8, 5, 9, 6, 38, 15, 39, 3, 0, 0, 0, 40, 40, -1, 4, 2, 0, 41, 22, 42, 3, 43, 3, 0, 0, 0, 1, 44, -1, 8, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 0, 6, 0, 45, 45, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 46, 23, 47, 24, 48, 25, 49, 26, 50, 0, 51, 0, 52, 0, 53, 0, 54, 3, 55, 1, 56, 27, 57, 27, 58, 2, 59, 3, 60, 3, 61, 3, 62, 28, 63, 29, 64, 3, 65, 3, 66, 10, 0 </int_array>
+			<string> "conns" </string>
+			<int_array  len="12"> 				5, 0, 68, 67, 2, 0, 7, 0, 70, 69, 2, 0 </int_array>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
