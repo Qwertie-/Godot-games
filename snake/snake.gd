@@ -1,15 +1,36 @@
 extends Node2D
-var body = preload("res://body.xml")
-var direction = Vector2(1,0)
-var snake = ["Body1","Body2"]
-var body_count = 3
-var last = 0
+var body         = preload("res://body.xml")
+var direction    = Vector2(1,0)
+var rotation     = 90
+var snake        = ["Body1"]
+var body_count   = 2
+var last         = 0
+var turn_pressed = false
 
 func _ready():
 	set_process(true)
 	get_node("Timer").start()
+	
+func _process(delta):
+	if Input.is_action_pressed("ui_left"):
+		if (!turn_pressed):
+			rotation = get_node("Head").get_rot()
+			get_node("Head").set_rot(rotation + deg2rad(90))
+			turn_pressed = true
+	else:
+		turn_pressed = false
 
 func _on_Timer_timeout():
+	#Check direction
+	if get_node("Head").get_rot() == deg2rad(0):
+		direction = Vector2(1,0)
+	elif get_node("Head").get_rot() == deg2rad(90):
+		direction = Vector2(0,1)
+	elif get_node("Head").get_rot() == deg2rad(180):
+		direction = Vector2(0,1)	
+	elif get_node("Head").get_rot() == deg2rad(270):
+		direction = Vector2(0,1)	
+
 	#Move head forward
 	var head_pos = get_node("Head").get_pos()
 	var new_head_pos = head_pos + (direction * 30)
