@@ -22,14 +22,16 @@ func _process(delta):
 
 func _on_Timer_timeout():
 	#Check direction
-	if get_node("Head").get_rot() == deg2rad(0):
+	if int(rad2deg(get_node("Head").get_rot())) == 0:
 		direction = Vector2(1,0)
-	elif get_node("Head").get_rot() == deg2rad(90):
-		direction = Vector2(0,1)
-	elif get_node("Head").get_rot() == deg2rad(180):
+	elif int(rad2deg(get_node("Head").get_rot())) == 90:
+		direction = Vector2(0,-1)
+	elif int(rad2deg(get_node("Head").get_rot())) == 180:
+		direction = Vector2(-1,0)	
+	elif int(rad2deg(get_node("Head").get_rot())) == 270:
 		direction = Vector2(0,1)	
-	elif get_node("Head").get_rot() == deg2rad(270):
-		direction = Vector2(0,1)	
+	print (int(rad2deg(get_node("Head").get_rot())))
+
 
 	#Move head forward
 	var head_pos = get_node("Head").get_pos()
