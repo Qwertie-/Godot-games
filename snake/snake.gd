@@ -9,16 +9,23 @@ var turn_pressed = false
 
 func _ready():
 	set_process(true)
+	set_process_input(true)
 	get_node("Timer").start()
 	
-func _process(delta):
-	if Input.is_action_pressed("ui_left"):
-		if (!turn_pressed):
-			rotation = get_node("Head").get_rot()
-			get_node("Head").set_rot(rotation + deg2rad(90))
-			turn_pressed = true
-	else:
-		turn_pressed = false
+
+func _input(event):
+	if event.is_action("ui_left")  && event.is_pressed() && !event.is_echo():
+		rotation = get_node("Head").get_rot()
+		get_node("Head").set_rot(rotation + deg2rad(90))
+		turn_pressed = true
+		if int(rad2deg(get_node("Head").get_rot())) > 270:
+			get_node("Head").set_rot(0)
+			
+	if event.is_action("ui_right") && event.is_pressed() && !event.is_echo():
+		rotation = get_node("Head").get_rot()
+		get_node("Head").set_rot(rotation + deg2rad(-90))
+		turn_pressed = true
+
 
 func _on_Timer_timeout():
 	#Check direction
