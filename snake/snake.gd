@@ -25,6 +25,9 @@ func _input(event):
 		rotation = get_node("Head").get_rot()
 		get_node("Head").set_rot(rotation + deg2rad(-90))
 		turn_pressed = true
+		if int(rad2deg(get_node("Head").get_rot())) < -270:
+			get_node("Head").set_rot(0)
+
 
 
 func _on_Timer_timeout():
@@ -37,6 +40,12 @@ func _on_Timer_timeout():
 		direction = Vector2(-1,0)	
 	elif int(rad2deg(get_node("Head").get_rot())) == 270:
 		direction = Vector2(0,1)	
+	elif int(rad2deg(get_node("Head").get_rot())) == -90:
+		direction = Vector2(0,1)
+	elif int(rad2deg(get_node("Head").get_rot())) == -180:
+		direction = Vector2(-1,0)	
+	elif int(rad2deg(get_node("Head").get_rot())) == -270:
+		direction = Vector2(0,-1)	
 	print (int(rad2deg(get_node("Head").get_rot())))
 
 
