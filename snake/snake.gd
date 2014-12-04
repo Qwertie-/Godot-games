@@ -1,5 +1,6 @@
 extends Node2D
 var body         = preload("res://body.xml")
+var food         = preload("res://food.xml")
 var direction    = Vector2(1,0)
 var rotation     = 90
 var snake        = ["Body1"]
@@ -11,6 +12,15 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	get_node("Timer").start()
+	var food_instance = food.instance()
+	food_instance.set_name("Food")
+	add_child(food_instance)
+	randomize()
+	var food_pos_x = int(rand_range(0,27)) * 30
+	var food_pos_y = int(rand_range(0,20)) * 30
+	get_node("Food").set_pos(Vector2(food_pos_x,food_pos_y))
+	
+	
 	
 
 func _input(event):
@@ -63,3 +73,8 @@ func _on_Timer_timeout():
 	#Remove last body part
 	remove_and_delete_child(get_node(snake[last]))
 	last += 1
+	
+	
+func spawn_food():
+	pass
+	
