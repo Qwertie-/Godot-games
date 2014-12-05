@@ -12,6 +12,8 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	get_node("Timer").start()
+	
+	#create first food piece
 	var food_instance = food.instance()
 	food_instance.set_name("Food")
 	add_child(food_instance)
@@ -42,21 +44,22 @@ func _input(event):
 
 func _on_Timer_timeout():
 	#Check direction
-	if int(rad2deg(get_node("Head").get_rot())) == 0:
+	if round(rad2deg(get_node("Head").get_rot())) == 0:
 		direction = Vector2(1,0)
-	elif int(rad2deg(get_node("Head").get_rot())) == 90:
+	elif round(rad2deg(get_node("Head").get_rot())) == 90:
 		direction = Vector2(0,-1)
-	elif int(rad2deg(get_node("Head").get_rot())) == 180:
+	elif round(rad2deg(get_node("Head").get_rot())) == 180:
 		direction = Vector2(-1,0)	
-	elif int(rad2deg(get_node("Head").get_rot())) == 270:
+	elif round(rad2deg(get_node("Head").get_rot())) == 270:
 		direction = Vector2(0,1)	
-	elif int(rad2deg(get_node("Head").get_rot())) == -90:
+	elif round(rad2deg(get_node("Head").get_rot())) == -90:
 		direction = Vector2(0,1)
-	elif int(rad2deg(get_node("Head").get_rot())) == -180:
+	elif round(rad2deg(get_node("Head").get_rot())) == -180:
 		direction = Vector2(-1,0)	
-	elif int(rad2deg(get_node("Head").get_rot())) == -270:
+	elif round(rad2deg(get_node("Head").get_rot())) == -270:
 		direction = Vector2(0,-1)	
-	print (int(rad2deg(get_node("Head").get_rot())))
+	print (rad2deg(get_node("Head").get_rot()))
+	#get_node("Head").set_rot(int(get_node("Head").get_rot()))
 
 
 	#Move head forward
