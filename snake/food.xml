@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="2" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://food.png" type="Texture"></ext_resource>
+	<ext_resource path="res://apple.png" type="Texture"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
@@ -52,11 +52,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 2.050545 </real>
+							<real> 5.720015 </real>
 							<string> "use_snap" </string>
 							<bool> True </bool>
 							<string> "ofs" </string>
-							<vector2> -481.336, -150.032 </vector2>
+							<vector2> -161.53, -74.5915 </vector2>
 							<string> "snap" </string>
 							<int> 30 </int>
 						</dictionary>
@@ -163,8 +163,8 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<vector2> 3, 3 </vector2>
-				<resource  resource_type="Texture" path="res://food.png">  </resource>
+				<vector2> 2, 2 </vector2>
+				<resource  resource_type="Texture" path="res://apple.png">  </resource>
 				<int> 1 </int>
 				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>

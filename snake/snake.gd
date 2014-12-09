@@ -59,9 +59,13 @@ func _on_Timer_timeout():
 	elif round(rad2deg(get_node("Head").get_rot())) == -270:
 		direction = Vector2(0,-1)	
 	print (rad2deg(get_node("Head").get_rot()))
-	#get_node("Head").set_rot(int(get_node("Head").get_rot()))
-
-
+	
+	#Check if head is on food
+	#if get_node("Head").get_pos() == get_node("Food").get_pos():
+		#print("Hit")
+	print("head" + str(get_node("Head").get_pos()))
+	print("food" + str(get_node("Food").get_pos()))
+	
 	#Move head forward
 	var head_pos = get_node("Head").get_pos()
 	var new_head_pos = head_pos + (direction * 30)
