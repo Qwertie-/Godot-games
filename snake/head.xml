@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="2" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
+<resource_file type="PackedScene" subresource_count="3" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
 	<ext_resource path="res://head.png" type="Texture"></ext_resource>
+	<resource type="CircleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<real name="radius"> 10 </real>
+
+	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="23">
+			<string_array  len="43">
 				<string> "Head" </string>
-				<string> "Node2D" </string>
+				<string> "RigidBody2D" </string>
 				<string> "_import_path" </string>
 				<string> "visibility/visible" </string>
 				<string> "visibility/opacity" </string>
@@ -15,6 +20,23 @@
 				<string> "transform/pos" </string>
 				<string> "transform/rot" </string>
 				<string> "transform/scale" </string>
+				<string> "shape_count" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "layers" </string>
+				<string> "mode" </string>
+				<string> "mass" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
+				<string> "custom_integrator" </string>
+				<string> "continuous_cd" </string>
+				<string> "contacts_reported" </string>
+				<string> "contact_monitor" </string>
+				<string> "sleeping" </string>
+				<string> "can_sleep" </string>
+				<string> "velocity/linear" </string>
+				<string> "velocity/angular" </string>
 				<string> "__meta__" </string>
 				<string> "Sprite" </string>
 				<string> "texture" </string>
@@ -28,15 +50,18 @@
 				<string> "modulate" </string>
 				<string> "region" </string>
 				<string> "region_rect" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
 			<int> 0 </int>
 			<string> "node_count" </string>
-			<int> 2 </int>
+			<int> 3 </int>
 			<string> "variants" </string>
-			<array  len="14" shared="false">
+			<array  len="16" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -44,6 +69,10 @@
 				<vector2> 0, 0 </vector2>
 				<real> 0 </real>
 				<vector2> 1, 1 </vector2>
+				<int> 1 </int>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
+				<int> 0 </int>
 				<dictionary  shared="false">
 					<string> "__editor_plugin_states__" </string>
 					<dictionary  shared="false">
@@ -52,11 +81,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 5.162318 </real>
+							<real> 7.022685 </real>
 							<string> "use_snap" </string>
 							<bool> True </bool>
 							<string> "ofs" </string>
-							<vector2> -160.976, -83.9275 </vector2>
+							<vector2> -118.499, -80.0761 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -165,13 +194,11 @@
 				</dictionary>
 				<vector2> 2, 2 </vector2>
 				<resource  resource_type="Texture" path="res://head.png">  </resource>
-				<int> 1 </int>
-				<int> 0 </int>
 				<color> 1, 1, 1, 1 </color>
 				<rect2> 0, 0, 0, 0 </rect2>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="70"> 				-1, -1, 1, 0, -1, 9, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 0, 0, 0, 11, 11, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 8, 12, 9, 13, 1, 14, 4, 15, 3, 16, 3, 17, 10, 18, 10, 19, 11, 20, 12, 21, 3, 22, 13, 0 </int_array>
+			<int_array  len="131"> 				-1, -1, 1, 0, -1, 26, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 10, 16, 2, 17, 2, 18, 5, 19, 3, 20, 10, 21, 10, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 11, 0, 0, 0, 28, 28, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 12, 29, 13, 30, 1, 31, 4, 32, 3, 33, 3, 34, 7, 35, 7, 36, 10, 37, 14, 38, 3, 39, 15, 0, 0, 0, 40, 40, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 41, 8, 42, 3, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="0"> 				 </int_array>
 		</dictionary>
