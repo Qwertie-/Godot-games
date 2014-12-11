@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.3917-beta1">
-	<ext_resource path="res://snake.gd" type="Script"></ext_resource>
+<resource_file type="PackedScene" subresource_count="4" version="1.0" version_name="Godot Engine v1.0.rc2.custom_build">
 	<ext_resource path="res://body.xml" type="PackedScene"></ext_resource>
+	<ext_resource path="res://snake.gd" type="Script"></ext_resource>
 	<ext_resource path="res://head.xml" type="PackedScene"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="20">
+			<string_array  len="21">
 				<string> "Game" </string>
 				<string> "Node2D" </string>
 				<string> "_import_path" </string>
@@ -20,6 +20,7 @@
 				<string> "script/script" </string>
 				<string> "__meta__" </string>
 				<string> "Head" </string>
+				<string> "RigidBody2D" </string>
 				<string> "Body1" </string>
 				<string> "Timer" </string>
 				<string> "wait_time" </string>
@@ -65,7 +66,7 @@
 							<string> "use_snap" </string>
 							<bool> True </bool>
 							<string> "ofs" </string>
-							<vector2> -287.815, -84.014 </vector2>
+							<vector2> -240.859, -65.4193 </vector2>
 							<string> "snap" </string>
 							<int> 30 </int>
 						</dictionary>
@@ -170,7 +171,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<resource  resource_type="PackedScene" path="res://head.xml">  </resource>
 				<vector2> 482, 272 </vector2>
@@ -265,22 +266,22 @@
 							</array>
 							<string> "deflight_rot_y" </string>
 							<real> 0.628319 </real>
-							<string> "viewport_mode" </string>
-							<int> 1 </int>
 							<string> "default_light" </string>
 							<bool> True </bool>
+							<string> "viewport_mode" </string>
+							<int> 1 </int>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "show_origin" </string>
-							<bool> True </bool>
 							<string> "znear" </string>
 							<real> 0.1 </real>
-							<string> "default_srgb" </string>
-							<bool> False </bool>
+							<string> "show_origin" </string>
+							<bool> True </bool>
 							<string> "deflight_rot_x" </string>
 							<real> 0.942478 </real>
+							<string> "default_srgb" </string>
+							<bool> False </bool>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -386,22 +387,22 @@
 							<real> 0.628319 </real>
 							<string> "fov" </string>
 							<real> 45 </real>
-							<string> "default_light" </string>
-							<bool> True </bool>
 							<string> "viewport_mode" </string>
 							<int> 1 </int>
+							<string> "default_light" </string>
+							<bool> True </bool>
 							<string> "ambient_light_color" </string>
 							<color> 0.15, 0.15, 0.15, 1 </color>
 							<string> "show_grid" </string>
 							<bool> True </bool>
-							<string> "znear" </string>
-							<real> 0.1 </real>
 							<string> "show_origin" </string>
 							<bool> True </bool>
-							<string> "deflight_rot_x" </string>
-							<real> 0.942478 </real>
+							<string> "znear" </string>
+							<real> 0.1 </real>
 							<string> "default_srgb" </string>
 							<bool> False </bool>
+							<string> "deflight_rot_x" </string>
+							<real> 0.942478 </real>
 						</dictionary>
 					</dictionary>
 					<string> "__editor_run_settings__" </string>
@@ -416,9 +417,9 @@
 				</dictionary>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="68"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 1, 12, 9, 3, 2, 0, 7, 10, 11, 11, 0, 0, 0, 1, 13, 12, 3, 2, 0, 7, 13, 11, 14, 0, 0, 0, 14, 14, -1, 4, 2, 0, 15, 2, 16, 3, 17, 1, 0 </int_array>
+			<int_array  len="68"> 				-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 0, 0, 0, 13, 12, 9, 3, 2, 0, 7, 10, 11, 11, 0, 0, 0, 13, 14, 12, 3, 2, 0, 7, 13, 11, 14, 0, 0, 0, 15, 15, -1, 4, 2, 0, 16, 2, 17, 3, 18, 1, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="6"> 				3, 0, 19, 18, 2, 0 </int_array>
+			<int_array  len="6"> 				3, 0, 20, 19, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>

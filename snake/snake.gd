@@ -1,6 +1,6 @@
 extends Node2D
 var body         = preload("res://body.xml")
-var food         = preload("res://food.xml")
+var Pickup         = preload("res://Pickup.xml")
 var direction    = Vector2(1,0)
 var rotation     = 90
 var snake        = ["Body1"]
@@ -13,17 +13,19 @@ func _ready():
 	set_process_input(true)
 	get_node("Timer").start()
 	
-	#create first food piece
-	var food_instance = food.instance()
-	food_instance.set_name("Food")
-	add_child(food_instance)
+	#create first Pickup piece
+	var Pickup_instance = Pickup.instance()
+	Pickup_instance.set_name("Pickup")
+	add_child(Pickup_instance)
 	randomize()
-	var food_pos_x = int(rand_range(0,27)) * 30
-	var food_pos_y = int(rand_range(0,20)) * 30
-	get_node("Food").set_pos(Vector2(food_pos_x,food_pos_y))
+	var Pickup_pos_x = int(rand_range(0,27)) * 30
+	var Pickup_pos_y = int(rand_range(0,20)) * 30
+	get_node("Pickup").set_pos(Vector2(Pickup_pos_x,Pickup_pos_y))
+	#get_node("Pickup").connect("_body_enter("body")", get_node("Game"), "_on_Pickup_body_enter")
 	
 	
-	
+func _on_Pickup_body_enter( body ):
+	pass
 
 func _input(event):
 	if event.is_action("ui_left")  && event.is_pressed() && !event.is_echo():
@@ -60,11 +62,11 @@ func _on_Timer_timeout():
 		direction = Vector2(0,-1)	
 	print (rad2deg(get_node("Head").get_rot()))
 	
-	#Check if head is on food
-	#if get_node("Head").get_pos() == get_node("Food").get_pos():
+	#Check if head is on Pickup
+	#if get_node("Head").get_pos() == get_node("Pickup").get_pos():
 		#print("Hit")
 	print("head" + str(get_node("Head").get_pos()))
-	print("food" + str(get_node("Food").get_pos()))
+	print("Pickup" + str(get_node("Pickup").get_pos()))
 	
 	#Move head forward
 	var head_pos = get_node("Head").get_pos()
@@ -82,6 +84,6 @@ func _on_Timer_timeout():
 	last += 1
 	
 	
-func spawn_food():
+func spawn_Pickup():
 	pass
 	
