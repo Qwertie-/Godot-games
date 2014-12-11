@@ -21,11 +21,11 @@ func _ready():
 	var Pickup_pos_x = int(rand_range(0,27)) * 30
 	var Pickup_pos_y = int(rand_range(0,20)) * 30
 	get_node("Pickup").set_pos(Vector2(Pickup_pos_x,Pickup_pos_y))
-	#get_node("Pickup").connect("_body_enter("body")", get_node("Game"), "_on_Pickup_body_enter")
+	get_node("Pickup").connect("body_enter", get_node("Game"), "_on_Pickup_body_enter")
 	
 	
 func _on_Pickup_body_enter( body ):
-	pass
+	print("yay")
 
 func _input(event):
 	if event.is_action("ui_left")  && event.is_pressed() && !event.is_echo():
@@ -61,12 +61,7 @@ func _on_Timer_timeout():
 	elif round(rad2deg(get_node("Head").get_rot())) == -270:
 		direction = Vector2(0,-1)	
 	print (rad2deg(get_node("Head").get_rot()))
-	
-	#Check if head is on Pickup
-	#if get_node("Head").get_pos() == get_node("Pickup").get_pos():
-		#print("Hit")
-	print("head" + str(get_node("Head").get_pos()))
-	print("Pickup" + str(get_node("Pickup").get_pos()))
+
 	
 	#Move head forward
 	var head_pos = get_node("Head").get_pos()
